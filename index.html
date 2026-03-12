@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- jQuery loaded from internet CDN — must be in head -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="wrapper"> 
+     <!-- TAB BUTTONS — jQuery will listen for clicks on these -->
+    <div id="tab-container">
+        <button class="tab-btn active" id="tab-login">Login</button>
+        <button class="tab-btn" id="tab-signup">Sign Up</button>
+    </div>
+
+    <!-- your login form  -->
+    <!-- your signup form  -->
+    <form id="loginForm" method="post" novalidate>  
+        <!-- novalidate — turns off browser's built-in validation so your JS handles it -->
+        <h2>Login </h2>
+        <div class="input-group">
+            <label for="entering">Enter the Email:</label>
+            <input type="text" name="email" id="email" placeholder="Email">
+            <span class="error-msg" id="email-err"></span>
+        </div>
+
+        <div class="input-group">
+            <label for="entering">Enter the Password:</label>
+            <input type="password" name="password" id="password" placeholder="Password">
+            <span class="error-msg" id="pass-err"></span>
+        </div>
+
+        <button class="btn">Submit</button>
+        <div id="login-success" class="success-msg">Login Successful!</div>
+    </form>
+
+
+    <form id="signupForm" method="post" novalidate>
+        <h2>Sign Up</h2>
+
+         <div class="input-group">
+            <label for="entering">FullName:</label>
+            <input type="text" name="fullname" id="signup-fullname" placeholder="Full Name">
+            <span class="error-msg" id="name-err"></span>
+        </div>
+
+
+
+        <div class="input-group">
+            <label for="entering">Enter the Email:</label>
+            <input type="text" name="email" id="signup-email" placeholder="Email">
+            <span class="error-msg" id="s-email-err"></span>
+        </div>
+
+          <div class="input-group">
+            <label for="s-phone">Phone Number:</label>
+            <input type="text" id="s-phone" placeholder="Phone Number">
+            <span class="error-msg" id="phone-err"></span>
+        </div>
+
+        <div class="input-group">
+            <label for="entering">Enter the Password:</label>
+            <input type="password" name="password" id="signup-password" placeholder="Password">
+            <span class="error-msg" id="s-pass-err"></span>
+        </div>
+
+         <div class="input-group">
+            <label for="entering">Confirm Password:</label>
+            <input type="password" name="confirm-password" id="signup-confirm-password" placeholder="Confirm Password">
+            <span class="error-msg" id="confirm-err"></span>
+        </div>
+
+        <!-- IMAGE UPLOAD -->
+        <div class="input-group">
+            <label for="s-image">Upload Profile Image (max 2MB):</label>
+            <input type="file" id="s-image" accept="image/*">
+            <span class="error-msg" id="image-err"></span>
+        </div>
+
+        <!-- DOCUMENT UPLOAD -->
+        <div class="input-group">
+            <label for="s-file">Upload Document (PDF / DOCX):</label>
+            <input type="file" id="s-file" accept=".pdf,.doc,.docx">
+            <span class="error-msg" id="file-err"></span>
+        </div>
+
+        <button class="btn">Sign Up</button>
+        <div id="signup-success" class="success-msg">Sign Up Successful!</div>
+
+    </form>
+
+   </div>
+
+     <script src="script.js"></script>
+</body>
+</html>
